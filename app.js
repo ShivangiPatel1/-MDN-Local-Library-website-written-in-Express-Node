@@ -11,10 +11,7 @@ var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" 
 var compression = require('compression');
 var helmet = require('helmet');
 //Set up default mongoose connection
-// Set up mongoose connection
-var dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
-var mongoDB = process.env.MONGODB_URI || dev_db_url;
-
+var mongoDB = 'mongodb://127.0.0.1/library_database';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 //Get the default connection
